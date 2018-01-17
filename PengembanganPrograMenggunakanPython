@@ -1,0 +1,80 @@
+import datetime
+
+current = datetime.datetime.now()
+tahun = current.year
+bulan = current.month
+tanggal = current.day
+tanggal1 = (2+current.day)
+tanggal2 = (5+current.day)
+tanggal3 = (7+current.day)
+
+import os
+
+def buku():
+	print ("selamat datang "+str(na) ,"di peminjaman buku SYAR")
+	print(30* "~")
+	print ("daftar buku :")
+	print("1. BUKU FISIKA")
+	print("2. BUKU KIMIA")
+	print("3. BUKU BIOLOGI")
+	print("4. BUKU BAHASA INDONESIA")
+	print("5. BUKU ALJABAR LINIER")
+	print("6. BUKU ALGORITMA PEMROGRAMAN")
+	print("7. BUKU KALKULUS")
+	print("8. BUKU AGAMA")
+	print("9. BUKU PENGANTAR TEKNOLOGI INFORMASI")
+	print("10. BUKU DESAIN GRAFIS")
+	print(30* "~")
+
+
+
+	
+def satu(s):
+	one = s+2
+	return one
+	
+def dua(d):
+	two = d+3
+	return two
+	
+def tiga (t):
+	three = t+4
+	return three
+
+loop = True
+
+na = input("masukkan nama anda : ")
+os.system("cls")
+while loop :
+	buku()
+	
+	w = input("masukkan nama buku yang anda pinjam (maksimal 3) :")
+	o = int(input('masukkan jumlah keseluruhan buku yang anda pinjam :'))
+	
+	if o == 1: 
+		os.system("cls")
+		qq = satu(o)
+		print ("Saudara "+str(na) ,"anda meminjam buku "+str(w) ,"dengan waktu peminjaman selama "+str(qq) ,"hari", "dikembalikan pada ",tanggal1,current.month,current.year)
+		print ("terima kasih dan semoga bermanfaat")
+		print (30*"_")
+		loop = False
+		
+	elif o == 2:
+		os.system("cls")
+		tt = dua(o)
+		print ("Saudara "+str(na) ,"anda meminjam buku "+str(w) ,"dengan waktu peminjaman selama "+str(tt) ,"hari", "dikembalikan pada ",tanggal2,current.month,current.year)
+		print ("terima kasih dan semoga bermanfaat")
+		print (30*"_")
+		loop = False
+		
+	elif o == 3:
+		os.system("cls")
+		dd = tiga(o)
+		print ("Saudara "+str(na) ,"anda meminsjam buku "+str(w) ,"dengan waktu peminjaman selama "+str(dd) ,"hari", "dikembalikan pada ",tanggal3,current.month,current.year)
+		print ("terima kasih dan semoga bermanfaat")
+		print (30*"_")
+		
+		loop = False
+		
+	else :
+		input ("peminjaman maksimal 3 buku")
